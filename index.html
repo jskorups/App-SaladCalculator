@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Salad maker</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/css"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron">
+
+        <div class="col-md-6"></div>
+        <div class="col-md-6 text-right"><span id="logo_name">Make your own salad</span></div>
+    </div>
+</div>
+<div class="container" id="vegsIn">
+    <div class="col-md-6">
+        <ul id="itemList">
+        <li><p>Tomato [g]:</p><input type="text" class="form-control veg"  id="tomato" value="0"></li>
+        <li><p>Cucumber [g]:</p><input type="text" class="form-control veg" id="cucmber" value="0"></li>
+        <li><p>Onion [g]:</p><input type="text" class="form-control veg" id="onion" value="0"></li>
+        <li><p>Mayoneese [g]:</p><input type="text" class="form-control veg" id="mayoneese" value="0"></li>
+        <li><p>Corn [g]:</p><input type="text" class="form-control veg" id="corn" value="0"></li>
+        <li><p>Bean [g]:</p><input type="text" class="form-control veg" id="bean" value="0"></li>
+        </ul>
+
+        <div class="row text-center" id="addItem"><button type="button" class="btn btn-primary btn-md text-center" value="0" data-toggle="modal" data-target="#myModal">Add new item</button></div>
+        <div class="container">
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center">Add new Item</h4>
+                        </div>
+                        <div class="modal-body text-center">
+                            Name:<input type="text" class="form-control newItem" id="nuName" width="80px">
+                            Protein per 100g [g]:<input type="text" class="form-control newItem" id="newProtein" value="0">
+                            Fats per 100g [g]<input type="text" class="form-control newItem" id="newFats" value="0">
+                            Carbohydartes per 100g [g]<input type="text" class="form-control newItem" id="newCarbo" value="0">
+                            Sugar per 100g [g]<input type="text" class="form-control newItem" id="newSugar" value="0">
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="btn btn-primary btn-md"  data-toggle="modal" data-target="#myModal" id="newItem" onclick="addingItem()">Add item</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center" id="count"><button type="button" class="btn btn-success" value="0" id="count_salad">Count your salad!</button></div>
+    </div>
+
+    <div class="col-md-6">
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="text-center" colspan="3">Your salad has:</th>
+            </tr>
+            <tr>
+                <th>Food part</th>
+                <th>Amount</th>
+                <th>RDA*</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Protein</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>Fats</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+            </tr>
+            <tr>
+                <td>Carbohydrates</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+            <tr>
+                <td>Sugar</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="app.js" type="text/javascript"></script>
+</body>
+</html>
